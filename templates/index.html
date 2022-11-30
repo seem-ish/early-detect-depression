@@ -1,0 +1,37 @@
+<head>
+  <meta charset="utf-8" />
+  <title>Depression Detection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <img
+  src="https://i.ibb.co/S0hT7Gg/Team-10-Week-7-9-Project-Milestone-2-Implementation-Unit-Testing-pptx.png"
+/>
+
+
+
+<section id="event-details-container">
+  <h1>Depression Detection</h1>
+
+  <button id="access">Join Us!</button>
+</section>
+
+<hr />
+<section id="description-container">
+  <h2>App Description</h2>
+  <p>Helps in the early detection on depression
+  We aim to develop an intelligent solution that will detect potential depression (short-term) and notify the person. We have built a ML -based solution for this. The solution recognises different human behavioral and lifestyle patterns, through data collected from wearable devices and smart phones. Our platform is intended to only detect potential depression (short-term). </br></br>
+<b>Disclaimer</b>: It can not be used as a replacement for any diagnosis and treatments from a certified healthcare professional.
+</p>
+</section>
+
+    <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+      </form>
+
+  <h4>
+    {{prediction_text}}
+  </h4>
+</body>
