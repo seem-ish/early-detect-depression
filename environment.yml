@@ -1,0 +1,8 @@
+name: early-detect-depression #Environment name
+dependencies:
+  - python=3.10.8
+  - sympy
+  - pandas
+  - numpy
+  - flask
+  - scikit-learn

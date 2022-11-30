@@ -32,11 +32,10 @@ def predict():
         file.save(flpath)
 
         X = preprocess(flpath)
-        print(type(X))
         model_rc = pickle.load(open('models/random_classifier_model.pkl', 'rb'))
-        print(model_rc.predict(X.reshape(1, -1)))
+        result = model_rc.predict(X.reshape(1, -1))
         output = model_rc.predict_proba(X.reshape(1, -1))
-        return render_template('index.html', prediction_text=f'Percentage {output}')
+        return render_template('index.html', prediction_text=f'Percentage {output} {result}')
     else:
         abort(400, "Error")
 
